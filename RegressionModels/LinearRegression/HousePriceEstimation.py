@@ -8,6 +8,7 @@ import sklearn
 from pathlib import Path
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler
 
 
 file_path = Path().cwd()/f'Data/train.csv'
@@ -105,6 +106,33 @@ y_hat = reg.predict(X_test_stand.values)
 
 print(mean_squared_error(y_test.values,y_hat,multioutput='raw_values'))
 
+#plot between y_hat and y values got by standardizaton 
+plt.scatter(range(len(y_test.values)),y_test.values)
+plt.plot(range(len(y_hat)),y_hat)
+plt.show()
+
+#x and y values for robust
+X_train_robust = X_train.copy()
+X_test_robust = X_test.copy()
+
+#srobust scaling for numarical columns
+X =  X_train_robust[num_col].values
+transformer = RobustScaler().fit(X)
+X_train_robust = transformer.transform(X)
+
+#fitting model 
+reg = LinearRegression().fit(X_train_robust, Y_train.values)
+
+print(reg.score(X_train_robust, Y_train))
+
+
+Xt =  X_test_robust[num_col].values
+transformer = RobustScaler().fit(Xt)
+X_test_robust = transformer.transform(Xt)
+
+y_hat = reg.predict(X_test_robust)
+
+#plot between y_hat and y values got by robust 
 plt.scatter(range(len(y_test.values)),y_test.values)
 plt.plot(range(len(y_hat)),y_hat)
 plt.show()
