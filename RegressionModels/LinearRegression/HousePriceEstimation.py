@@ -7,6 +7,8 @@ from sklearn.model_selection import train_test_split
 import sklearn
 from pathlib import Path
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+
 
 file_path = Path().cwd()/f'Data/train.csv'
 
@@ -32,8 +34,11 @@ data.fillna(data.mean(), inplace=True)
 
 
 
-#converting cato variables into labels
+#finding cato variables into labels
 cato_columns = data.columns[data.dtypes == 'object']
+#numarical values columns
+num_col = data.columns[(data.dtypes == 'object')==False]
+
 
 #filling catogorial columns with their mode
 for i in cato_columns:
@@ -57,23 +62,49 @@ train_data,test_data =  sklearn.model_selection.train_test_split(data)
 
 
 # X and y values to fit model 
-X =  train_data.drop('SalePrice',axis = 1)
-y = train_data['SalePrice']
+X_train =  train_data.drop('SalePrice',axis = 1)
+Y_train = train_data['SalePrice']
+
 # fitting X and y values 
-reg = LinearRegression().fit(X.values, y.values)
+reg = LinearRegression().fit(X_train.values, Y_train.values)
 
 # regression score 
-print(reg.score(X, y))
+print(reg.score(X_train, Y_train))
 
 # values of X and y for test data 
 X_test = test_data.drop('SalePrice',axis = 1)
 y_test = test_data['SalePrice']
 
+#x and y values for standardization
+X_train_stand = X_train.copy()
+X_test_stand = X_test.copy()
+
+#removing saleprice columns because we dont want it to standardize
+num_col = num_col.drop('SalePrice')
+
+# function to standardize each column  
+for i in num_col:
+    
+    # fit on training data column
+    scale = StandardScaler().fit(X_train_stand[[i]])
+    
+    # transform the training data column
+    X_train_stand[i] = scale.transform(X_train_stand[[i]])
+    
+    # transform the testing data column
+    X_test_stand[i] = scale.transform(X_test_stand[[i]])
+
+#fitting model 
+reg = LinearRegression().fit(X_train_stand.values, Y_train.values)
+
+print(reg.score(X_train_stand, Y_train))
+
 # predicting values of test data
-y_hat = reg.predict(X_test.values)
+y_hat = reg.predict(X_test_stand.values)
+
 
 print(mean_squared_error(y_test.values,y_hat,multioutput='raw_values'))
 
-plt.scatter(range(len(y.values)),y.values)
+plt.scatter(range(len(y_test.values)),y_test.values)
 plt.plot(range(len(y_hat)),y_hat)
 plt.show()
