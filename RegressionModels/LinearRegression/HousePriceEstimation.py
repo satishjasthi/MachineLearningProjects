@@ -66,54 +66,16 @@ train_data,test_data =  sklearn.model_selection.train_test_split(data)
 X_train =  train_data.drop('SalePrice',axis = 1)
 Y_train = train_data['SalePrice']
 
-# fitting X and y values 
-reg = LinearRegression().fit(X_train.values, Y_train.values)
-
-# regression score 
-print(reg.score(X_train, Y_train))
 
 # values of X and y for test data 
 X_test = test_data.drop('SalePrice',axis = 1)
 y_test = test_data['SalePrice']
 
-#x and y values for standardization
-X_train_stand = X_train.copy()
-X_test_stand = X_test.copy()
-
-#removing saleprice columns because we dont want it to standardize
-num_col = num_col.drop('SalePrice')
-
-# function to standardize each column  
-for i in num_col:
-    
-    # fit on training data column
-    scale = StandardScaler().fit(X_train_stand[[i]])
-    
-    # transform the training data column
-    X_train_stand[i] = scale.transform(X_train_stand[[i]])
-    
-    # transform the testing data column
-    X_test_stand[i] = scale.transform(X_test_stand[[i]])
-
-#fitting model 
-reg = LinearRegression().fit(X_train_stand.values, Y_train.values)
-
-print(reg.score(X_train_stand, Y_train))
-
-# predicting values of test data
-y_hat = reg.predict(X_test_stand.values)
-
-
-print(mean_squared_error(y_test.values,y_hat,multioutput='raw_values'))
-
-#plot between y_hat and y values got by standardizaton 
-plt.scatter(range(len(y_test.values)),y_test.values)
-plt.plot(range(len(y_hat)),y_hat)
-plt.show()
-
 #x and y values for robust
 X_train_robust = X_train.copy()
 X_test_robust = X_test.copy()
+
+num_col = num_col.drop('SalePrice')
 
 #srobust scaling for numarical columns
 X =  X_train_robust[num_col].values
