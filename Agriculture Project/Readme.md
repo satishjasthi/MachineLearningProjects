@@ -1,9 +1,9 @@
 <h1 align="center">INDIAN CROP RECOMENDATION SYSTEM</h1> 
-<img src="India-promising.jpg" width="1500" height="800">
+<img src="India-promising.jpg" width="800" height="800">
 
 # Aim of the project - 
 -  Agriculture is an important part of India's economy and at present it is among the <b>top two</b> farm producers in the world. This sector provides approximately <b>52 percent</b> of the total number of <b>jobs available in India</b> and contributes around <b>16 percent</b> to the GDP. Agriculture is the only means of living for almost two-thirds of the employed class in India. As being stated by the economic data of financial year 2006-07, agriculture has acquired <b>18 percent of India's GDP</b>. The agriculture sector of India has occupied almost <b>43percent of India's geographical area</b>.
--  Agriculture in India plays a predominant role in economy and employment. The common problem existing among the Indian farmers are they don’t choose the right crop based on their soil requirements. Due to this they face a serious setback in productivity. if they can choose right crop for the cultivation based on soil and environmental factores yeild of the crop will be increases and famers can get better profits.
+-  Agriculture in India plays a predominant role in economy and employment. The common problem existing among the Indian farmers are majority of them don’t choose the right crop based on their soil requirements. Due to this they face a serious setback in productivity. if they can choose right crop for the cultivation based on soil and environmental factores, <b>yeild</b> of the crop will be increases and famers can get better profits.
 - This model is bulit to solve this problem as much as possible and hope this model will help farmers in selecting main crop which is suitable for the soil.
 
 # Data
@@ -12,20 +12,22 @@
     - Data hase been taken from the <a href="https://www.kaggle.com/atharvaingle/crop-recommendation-dataset">Kaggle : Kaggle Crop recomendation dataset</a> ,  <b>Data contains 7 coloumns</b> 
 <img src="data coloumns.png" width="800" height="600">
 
-- <b> Data overview</b>- 
-    - columns like N P and K are renamed as Nitrogen Phosphoroous and Potassion
- ![](2021-03-15-17-16-04.png)
+- <b> Data overview</b>-
+    
+    - columns like N P and K are renamed as Nitrogen Phosphorous and Potassion
+    <img src='data_overview.png' >
     - There are no null values in the data 
     - Checking for outliers has been done for each class coloumn level , and no outliers are detected.
     - New column called soil type has been added to the data based on the soil ph - 
     <img src="Screenshot 2021-03-05 103430.png" width="1200" height="800"> 
-    - According to this chart soil type is devided into 3 types , ALlkaline (soil which have ph above 7.3),ACidic(soil having pH below 6.5) and Neutral (soil having pH between 6.6-7.3)
+    - According to this chart soil type is devided into 3 types , ALlkaline (soil which have ph above 7.3),Acidic(soil having pH below 6.5) and Neutral (soil having pH between 6.6-7.3)
 
 - <b>PH</b>
     
     - Soil pH plays an importent role in the growth of the plant , Soil pH is the value measure of <b>acidity</b> and <b>alkalinity</b> it possess. Soil pH value is considered as one of the most vital factor which may determine the yield of the crops. Soil pH is important because a soil’s acidity or alkalinity determines what plant nutrients are available to plant roots. Nutrients in the soil—elements such as nitrogen, phosphorus, and potassium—become available to plants when they dissolve in water or soil moisture. Most plant nutrients will not dissolve when the soil is either too acidic or too alkaline.
     - <b>Effect of pH on plant growth</b>
     <img src="ph.jpg" width="800" height="600">
+    
     - <b>Plant height</b> - Plant will grow faster for soil having  <b>pH5</b> as shown in the above graph and slow for pH6 this indicates that with less ph in the soil will be faster the growth 
     - <b>Lateral spread, Leaf length, and width</b> will grow faster to a certain period with <b>Neutral pH(6)</b> And decrease with increase or decrease in pH value.
 
@@ -41,7 +43,7 @@
     ![](2021-03-15-17-40-18.png)
     ![](2021-03-15-17-41-35.png)
     ![](2021-03-15-17-42-06.png)
-    - This are the world cloud plots that are obbtained by the data.
+    - This are the world cloud plots that are obtained by the data.
 - <b>Data Analysis</b>
     - Data analysis has been  for crop wize and created a dashboard on google data studios
     - Click <a href="https://datastudio.google.com/s/vKmP1ksHiz4">here to know more about indian crops</a>
@@ -53,7 +55,7 @@
     - Phosphorous and Potassium are highly co-related to each other which leads to Multicollinearity in the data and the Decision tree will not be affected by the Multicollinearity.
 
 - <b>training Model</b>
-    - The model is built on the train data and confusion matrix of thr trained model is - 
+    - The model is built on the train data and confusion matrix of the trained model is - 
     ![](2021-03-15-18-48-15.png)
     - model is trained very well with an accurecy of 100% and Recall and precision of 100%
 
@@ -81,7 +83,7 @@
 
         - <font color='red'><b>*Note - </b> </font> <b>Gini impurity is the default selection criterion for the decision tree</b> 
 
-        - Decision tree model which is built on the information selection criterion predicting same as the model with ginni index as selection criterion. There is no big diffrence in the performance of the model hence for further tunning Decision tree with ginni impurity.
+        - Decision tree model which is built on the Entropy selection criterion predicting same as the model with ginni index as selection criterion. There is no big diffrence in the performance of the model hence for further tunning Decision tree with ginni impurity will be used.
     ![](2021-03-15-19-03-42.png)
 
     - <b>Depth of tree and Minimum sample leaf</b>
@@ -97,7 +99,7 @@
             - precision = 0.99156
         - And the confusion matrix for the model bilt with alpha value mentioned above 
         ![](2021-03-15-19-16-51.png)
-        - <b>Decision tree accurecy is increased by 1% after dooing hyperparameter tunning.</b> 
+        - <b>Decision tree accurecy is increased by 1% after doing hyperparameter tunning.</b> 
     - <b>Visulizing a decision tree</b>
     ![](2021-03-15-19-19-38.png)
         -  Above image is the part of a decision tree that is build  in <b>KNIME</b> visulizing tool , by seeing this <b>HUMIDITY</b> is dividing the  <b>80%</b> of the total data into 2 equal part , this means humidity is playing a very cruicial role in decision tree 
