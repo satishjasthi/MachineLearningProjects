@@ -10,7 +10,7 @@
 
 - <b>SOURCE</b> 
     - Data hase been taken from the <a href="https://www.kaggle.com/atharvaingle/crop-recommendation-dataset">Kaggle : Kaggle Crop recomendation dataset</a> ,  <b>Data contains 7 coloumns</b> 
-<img src="data coloumns.png" width="800" height="300">
+<img src="data coloumns.png" width="800" height="600">
 
 - <b> Data overview</b>- 
     - columns like N P and K are renamed as Nitrogen Phosphoroous and Potassion
@@ -18,7 +18,7 @@
     - There are no null values in the data 
     - Checking for outliers has been done for each class coloumn level , and no outliers are detected.
     - New column called soil type has been added to the data based on the soil ph - 
-    <img src="Screenshot 2021-03-05 103430.png" width="1200" height="300"> 
+    <img src="Screenshot 2021-03-05 103430.png" width="1200" height="800"> 
     - According to this chart soil type is devided into 3 types , ALlkaline (soil which have ph above 7.3),ACidic(soil having pH below 6.5) and Neutral (soil having pH between 6.6-7.3)
 
 - <b>PH</b>
