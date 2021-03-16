@@ -1,5 +1,5 @@
 <h1 align="center">INDIAN CROP RECOMENDATION SYSTEM</h1> 
-<img src="India-promising.jpg" width="800" height="800">
+<img src="India-promising.jpg" width="1200" height="800">
 
 # Aim of the project - 
 -  Agriculture is an important part of India's economy and at present it is among the <b>top two</b> farm producers in the world. This sector provides approximately <b>52 percent</b> of the total number of <b>jobs available in India</b> and contributes around <b>16 percent</b> to the GDP. Agriculture is the only means of living for almost two-thirds of the employed class in India. As being stated by the economic data of financial year 2006-07, agriculture has acquired <b>18 percent of India's GDP</b>. The agriculture sector of India has occupied almost <b>43percent of India's geographical area</b>.
