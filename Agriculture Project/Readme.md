@@ -35,6 +35,13 @@
     - <b>Temapreture</b> is the measure of heat wheras <b>Humidity</b> is a measure of the amount of water vapor in the air.
     -   <b>Effect of Temperature</b> - High temperature, even for short period, affects crop growth especially in temperate crops like wheat. High air temperature reduces the growth of shoots and in turn reduces root growth. High soil temperature is more crucial as damage to the roots is severe resulting in substantial reduction in shoot growth.
     - <b>Effect of Humidity</b> - When conditions are too humid, it may promote the growth of mold and bacteria that cause plants to die and crops to fail, as well as conditions like root or crown rot. Humid conditions also invite the presence of pests, such as fungus gnats, whose larva feed on plant roots and thrive in moist soil.
+
+- <b>Rainfall</b>
+    ![](2021-03-16-10-47-27.png)
+    - Compared to other crops <b>Rice</b> required more rainfall with an average of <b>236cm</b> of rainfall , In india top rice producing states are <b>West bengal , Uttar Pradesh and  Punjab </b>. 
+    - <b>Canals</b> constitute an important source of irrigation in <b>Uttar Pradesh.</b>  But the amount of rainfall, especially in western parts of the state, is not sufficient for sustained agricultural growth.Therefore, a large number of canals have been constructed to provide regular supply of sufficient water to the crops. Uttar Pradesh has about <b>3,091</b> thousand hectares under canal irrigation which is <b>30.91% of the total canal irrigated area of the country.</b> Over one-fourth of the net irrigated area of the state is irrigated by canals. 
+    - As per the information available on the website of Ministry of Agriculture & Cooperation, Government of India, the percentage of cultivated land area that is covered by the Irrigation in different areas of Punjab is about </b>97.03%.</b> 
+    - West bengal is the state which has the <b>9th highest rainfall in india.</b>
 - <b>Nutrients in soil</b>
     - The nutrients that are required by crops in the largest amounts are <b>Nitrogen</b>, <b>Phosphorus</b> and <b>Potassium(K)	</b>. For that reason, they are often considered as the <b>most important nutrients</b>.
     - The main functions of N and P are that they are constituents of <b>proteins</b> and <b>nucleic acids</b>, which are important components of <b>plant tissue.</b> K is the only nutrient that is not a constituent of organic plant compounds, but is mainly of importance in the regulation of processes in the plant, such as <b>osmosis</b> and <b>enzyme activities.</b> K is generally playing an important role for the <b>quality</b> of harvested plant products.
@@ -46,7 +53,8 @@
     - This are the world cloud plots that are obtained by the data.
 - <b>Data Analysis</b>
     - Data analysis has been  for crop wize and created a dashboard on google data studios
-    - Click <a href="https://datastudio.google.com/s/vKmP1ksHiz4">here to know more about indian crops</a>
+    ![](2021-03-16-10-40-27.png)
+    - Click <a href="https://datastudio.google.com/s/vKmP1ksHiz4">here to see <b>DASHBOARD</b></a>
 
 
  # MODEL
