@@ -127,3 +127,29 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Crop_recommendation.csv
+India-promising.jpg
+ph.jpg
+Screenshot 2021-03-05 103430.png
+Price_data/Banglore_cocnut.xls
+Price_data/Banglore_maize.xls
+Price_data/Banglore_rice.xls
+Price_data/Bidar rice.xls
+Price_data/Bidar_maize.xls
+Price_data/Davangere_cocnut.xls
+Price_data/Davangere_maize.xls
+Price_data/Davangere_paddey.xls
+Price_data/Mysore_coconut.xls
+Price_data/Mysore_maize.xls
+Price_data/Mysore_rice.xls
+Price_data_csvfiles/Bangalore_Coconut
+Price_data_csvfiles/Bangalore_Maize
+Price_data_csvfiles/Bangalore_Rice
+Price_data_csvfiles/Bidar_Maize
+Price_data_csvfiles/Bidar_Rice
+Price_data_csvfiles/Davangere_Coconut
+Price_data_csvfiles/Davangere_Maize
+Price_data_csvfiles/Davangere_Paddy(Dhan)(Common)
+Price_data_csvfiles/Mysore_Coconut
+Price_data_csvfiles/Mysore_Maize
+Price_data_csvfiles/Mysore_Rice
