@@ -50,10 +50,10 @@
     <img src="images/ph.png" width="400" />
     <img src="images/rainfall.png" width="400" /> 
     <img src="images/Humidity.png" width="400" />
-    <img src="images/nitrogen.png" width="400" />
-    <img src="images/potassium.png" width="400" /> 
+    <img src="images/temperature.png" width="400" /> 
     <img src="images/Phosphorous.png" width="400" />
-    <img src="images/temperature.png" width="400" />  
+    <img src="images/nitrogen.png" width="400" />
+    <img src="images/potassium.png" width="400" />  
   </p>
 
 # Exploratory data analysis
