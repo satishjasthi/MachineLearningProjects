@@ -47,13 +47,13 @@
 -   
 
   <p float="left">
-    <img src="images/ph.png" width="400" />
-    <img src="images/rainfall.png" width="400" /> 
-    <img src="images/Humidity.png" width="400" />
-    <img src="images/temperature.png" width="400" /> 
-    <img src="images/Phosphorous.png" width="400" />
-    <img src="images/N.png" width="400" />
-    <img src="images/K.png" width="400" />  
+    <img src="images/ph.png" width="300" />
+    <img src="images/rainfall.png" width="300" /> 
+    <img src="images/Humidity.png" width="300" />
+    <img src="images/temperature.png" width="300" /> 
+    <img src="images/Phosphorous.png" width="300" />
+    <img src="images/N.png" width="300" />
+    <img src="images/K.png" width="300" />  
   </p>
 
 # Exploratory data analysis
