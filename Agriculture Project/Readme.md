@@ -41,17 +41,17 @@
 
    <img src="images/boxplot each class.png"> 
 
--  For clear veiw [click here](https://github.com/mohansaimandalapu/MachineLearningProjects/tree/main/Agriculture%20Project)
+-  For clear veiw [click here](https://github.com/mohansaimandalapu/MachineLearningProjects/blob/main/Agriculture%20Project/images/boxplot%20each%20class.png)
 
 ## Feature scaling
 -   
 
   <p float="left">
     <img src="images/ph.png" width="400" />
-    <img src="images/rainfall.png" width="410" /> 
+    <img src="images/rainfall.png" width="400" /> 
     <img src="images/Humidity.png" width="400" />
-    <img src="images/nitrogen.png" width="410" />
-    <img src="images/potassium.png" width="389" /> 
+    <img src="images/nitrogen.png" width="400" />
+    <img src="images/potassium.png" width="400" /> 
     <img src="images/Phosphorous.png" width="400" />
     <img src="images/temperature.png" width="400" />  
   </p>
@@ -104,9 +104,9 @@ Plot worldcloud of crops and highligh the crops that requires high ammount of ni
 
 <b>Answer:</b>
 <p float="left">
-    <img src="images/N worldcloud.png" width="300" />
-    <img src="images/K worldcloud.png" width="290" /> 
-    <img src="images/P worldcloud.png" width="302" />
+    <img src="images/N worldcloud.png" width="500" />
+    <img src="images/K worldcloud.png" width="492" /> 
+    <img src="images/P worldcloud.png" width="502" />
 </p>
 
 - From 1st worldcloud you can see nitrogen rich crops that are Cotton, Coffee, Banana and muskmelon
@@ -127,4 +127,7 @@ Plot worldcloud of crops and highligh the crops that requires high ammount of ni
 - Low temperature crops 
 <img src = 'images/low temperature crops.png'>
 
-<b>Crops wize data analysis has benn done on the google studios and created a dashboard [Click hear](https://datastudio.google.com/reporting/2129d913-26cf-43c3-80a7-ba00fd62ce79/page/Ivx) to check out .</b>
+## Dashbard :
+<img src='images/Dashboard1.png'>
+
+<b>Crops wize data analysis has been done on the google studios and created a dashboard [Click hear](https://datastudio.google.com/reporting/2129d913-26cf-43c3-80a7-ba00fd62ce79/page/Ivx) to check out .</b>
