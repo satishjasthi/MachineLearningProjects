@@ -52,8 +52,8 @@
     <img src="images/Humidity.png" width="400" />
     <img src="images/temperature.png" width="400" /> 
     <img src="images/Phosphorous.png" width="400" />
-    <img src="images/nitrogen.png" width="400" />
-    <img src="images/potassium.png" width="400" />  
+    <img src="images/N.png" width="400" />
+    <img src="images/K.png" width="400" />  
   </p>
 
 # Exploratory data analysis
