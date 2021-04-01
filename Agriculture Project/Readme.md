@@ -130,4 +130,4 @@ Plot worldcloud of crops and highligh the crops that requires high ammount of ni
 ## Dashbard :
 <img src='images/Dashboard1.png'>
 
-<b>Crops wize data analysis has been done on the google studios and created a dashboard [Click hear](https://datastudio.google.com/reporting/2129d913-26cf-43c3-80a7-ba00fd62ce79/page/Ivx) to check out .</b>
+<b>Crops wize data analysis has been done on the google studios and created a dashboard [Click hear](https://datastudio.google.com/reporting/2129d913-26cf-43c3-80a7-ba00fd62ce79/page/Ivx) to check out an intractive dashboard .</b>
