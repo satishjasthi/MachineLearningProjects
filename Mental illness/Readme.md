@@ -31,4 +31,8 @@ By using this resources created a dataset which is easy for analysis
 
 # World cloud of insights
 
+<<<<<<< HEAD:Mental illness/READ.MD
 <img src="images/worldcloud.png">
+=======
+![](2021-02-22-15-07-30.png)
+>>>>>>> 10a2164ae7434b2722fd0bd32239ff8ce446c06b:Mental illness/Readme.md
