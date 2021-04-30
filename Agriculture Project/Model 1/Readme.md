@@ -98,7 +98,7 @@ Name the crops that can grow by farmers where there is very less rainfall condit
 
 <b>Answer B :</b> `Todo` Check whether thre is a relation between soil type and temperature humidity and rainfall
 
-## Question 4
+## Question 4:
 
 Plot worldcloud of crops and highligh the crops that requires high ammount of nitrogen , phosphorous , pottasium.
 
@@ -113,7 +113,7 @@ Plot worldcloud of crops and highligh the crops that requires high ammount of ni
 - From 2nd worldcloud you can see Potassium rich crops that are Grapes, Apple, Chickpea and muskmelon
 - From 3rd worldcloud you can see Posporous  rich crops that are Apple, Grapes, Banana and Blackgram.
 
-## Question 5
+## Question 5:
 
  Name the crops which can grow by farmers in wide range of temperature, and name the crops which can srvive on low temperature regions and high temperature regions.
  - Consider
@@ -127,7 +127,54 @@ Plot worldcloud of crops and highligh the crops that requires high ammount of ni
 - Low temperature crops 
 <img src = 'images/low temperature crops.png'>
 
-## Dashbard :
+## Dashboard :
 <img src='images/Dashboard1.png'>
 
 <b>Crops wize data analysis has been done on the google studios and created a dashboard [Click hear](https://datastudio.google.com/reporting/2129d913-26cf-43c3-80a7-ba00fd62ce79/page/Ivx) to check out an intractive dashboard .</b>
+
+# Model Building
+
+## Question 6:
+Which model you are going to use for this data? What are the pros and cons of the model that you're going to use and how do you handle the cons of the model?
+
+<b>Answer :</b> For this model Decision tree is one of the best model that you can use.beacause of Decision tree pros and cons.
+- <b>Pros</b> :
+  - One of the main advantages of decision trees is that their outputs are easy to read and interpret, without even requiring statistical knowledge. For example, when using decision trees to this crop recomendation data, the farmers can read and interpret the graphical representation of the data without requiring statistical knowledge and they can see and interpert on what basis the crop is selected.
+  - Compared to other algorithms decision trees requires less effort for data preparation during pre-processing.
+  - No feature scaling (standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
+  - Desicion trees make no assumptions on relationships between features. It just constructs splits on single features that improves classification, based on an impurity measure like Gini or entropy. for example in our data features Potassium and Phosphorous  are heavily correlated, no /little information can be gained from splitting on Potassium after having split on Phosporous. So it would typically get ignored in favor of Nitrogen or any other features which have high information gain.
+
+- <b>Cons:</b>
+  - The main problem with decision trees is overfitting. An overfitted decision tree is one that learned the training data so well that it will have problems interpreting new unseen data. In other words, the decision tree tried to learn EVERYTHING from the training data, included noise and outliers, And while this fits training data perfectly, it impacts negatively for the future data.
+  - Decision trees are sensitive to the changes in data. small changes in data can end with a different decision tree.
+
+- In decision tree there are many techiniques or methods to handel overfitting of the model. You can reduce overfitting of the model by using those methods.
+
+- For our probelem decision tree will help in not only predicting the right crops but also in showing the pattern of prediction. Decision trees are very interactive and very easy to understand each and every step in the recomendation of the crop , so that framer can easly understand the logic behing the crop recomdentation this willl help them a lot.
+
+## Question 7:
+
+Why are you not using other tree based algorithams like Random forest tree and other boosting algorithams for this data.
+
+<b>Answer:</b>
+
+## Train Test Split
+
+In this step you will split the data into Train data and test data.
+- Train Dataset: Used to fit the machine learning model.
+- Test Dataset: Used to evaluate the fit machine learning model.
+
+-For this model train test split percentage is 
+70% training data,30% test data. For each class, 70% of the class data go to training, and the remaining 30% of the data goes to test. so that there will be no class imbalance while training the model.
+
+## Training data 
+
+Simple decision tree with default values provided by the sk-learn has been used for model training.
+### TODO confusion matrix
+
+## Testing Data:
+
+
+## Overfitting:
+
+
