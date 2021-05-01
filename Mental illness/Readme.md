@@ -22,11 +22,11 @@ By using this resources created a dataset which is easy for analysis
 # Incredible insights
  
 
-<img src="dashboard/Dashboard page1.png"> 
+<img src="Dashboard/Dashboard page1.png"> 
 
-<img src="dashboard/Dashboard page2.png">
+<img src="Dashboard/Dashboard page2.png">
 
-<img src="dashboard/Dashboard page3.png">
+<img src="Dashboard/Dashboard page3.png">
 
 
 # World cloud of insights
