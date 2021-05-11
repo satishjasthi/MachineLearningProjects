@@ -1,4 +1,3 @@
-
 import pandas as pd
 import pickle
 from matplotlib import pyplot as plt
@@ -10,6 +9,9 @@ import scikitplot as skplt
 from sklearn.metrics import accuracy_score
 import warnings
 warnings.filterwarnings('ignore')
+import logging
+log = logging.getLogger("my-logger")
+
 
 
 
@@ -18,8 +20,9 @@ class CropRecommendation:
         data = pd.read_csv(file_path)
         self.data = data
 
-    def train(self):
+    log.info("Data Preprosiing .....")
 
+    def data_preprocessing(self):
         #Renaming the coloumn names 
         self.data.rename(columns={'N':'Nitrogen','P':'Phosphorus','K':'Potassium(K)'},inplace=True)
 
@@ -28,7 +31,10 @@ class CropRecommendation:
 
         #Rounding the values into two decimal points of the features beacuse it contains many decimal values
         self.data[['temperature','humidity','ph','rainfall']] =  self.data[['temperature','humidity','ph','rainfall']].round(decimals=2)
+    
+    log.info("Test train Spliting .....")
 
+    def Test_trsin_split(self):
         #empty datframes
         train_dataframe = pd.DataFrame(columns=('Nitrogen','Phosphorus','Potassium(K)','temperature','humidity','ph','rainfall','label'))
         test_dataframe =  pd.DataFrame(columns=('Nitrogen','Phosphorus','Potassium(K)','temperature','humidity','ph','rainfall','label'))
@@ -46,21 +52,25 @@ class CropRecommendation:
 
     
 
-            X_train = train_dataframe.drop('label',axis=1)
-            y_train = train_dataframe['label']
+            self.X_train = train_dataframe.drop('label',axis=1)
+            self.y_train = train_dataframe['label']
             self.X_test = test_dataframe.drop('label',axis=1)
             self.y_test = test_dataframe['label']
 
+    log.info("Traing model .....")
 
+
+    def train(self):
         # training decision tree model
         decison_tree = DecisionTreeClassifier(criterion='gini',splitter='best', ccp_alpha=0.0012185866081969973)
-        decison_tree = decison_tree.fit(X_train,y_train)
+        decison_tree = decison_tree.fit(self.X_train,self.y_train)
 
         # save the model to disk
         self.filename = 'Crop_recommendation_model.sav'
         pickle.dump(decison_tree, open(self.filename, 'wb'))
 
         
+    log.info("evaluating model .....")
 
     def Evaluate(self):
         # load the model from disk
@@ -80,7 +90,9 @@ class CropRecommendation:
         plt.show()
 
 if __name__ == "__main__":
-    model = CropRecommendation(r'C:\Users\mohan\Documents\Datascience Projects\Machine learning projects\Agriculture project\Agriculture Project\Model 1\Crop_recommendation.csv')
+    model = CropRecommendation(r'C:\Users\mohan\Documents\Datascience Projects\Machine learning projects\Agriculture project\Agriculture Project\Crop_Identification\Crop_recommendation.csv')
+    model.data_preprocessing()
+    model.Test_trsin_split()
     model.train()
     model.Evaluate()
 
