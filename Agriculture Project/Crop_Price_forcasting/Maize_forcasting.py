@@ -5,6 +5,7 @@ from numpy import percentile
 from fbprophet import Prophet
 from matplotlib import pyplot as plt
 from sklearn.metrics import mean_absolute_error
+import os
 
 
 class Maize_forcasting:
@@ -48,7 +49,7 @@ class Maize_forcasting:
         self.data.reset_index(inplace=True)
         self.data.rename(columns = {'index':'ds','price':'y'},inplace=True)
 
-        print(self.data)
+        
 
 
     def Train(self):
@@ -171,7 +172,7 @@ class Maize_forcasting:
         plt.show()
 
 if __name__ == "__main__":
-    model = Maize_forcasting(r'C:\Users\mohan\Documents\Datascience Projects\Machine learning projects\Agriculture project\Agriculture Project\Crop_Price_forcasting\Banglore_maize.csv')
+    model = Maize_forcasting(os.path.join(os.getcwd(), "data/Maize.csv"))
     model.data_preprocessing()
     model.Train()
     model.Evaluate()

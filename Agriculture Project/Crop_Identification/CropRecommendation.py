@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings('ignore')
 import logging
 log = logging.getLogger("my-logger")
-
+import os
 
 
 
@@ -90,7 +90,7 @@ class CropRecommendation:
         plt.show()
 
 if __name__ == "__main__":
-    model = CropRecommendation(r'C:\Users\mohan\Documents\Datascience Projects\Machine learning projects\Agriculture project\Agriculture Project\Crop_Identification\Crop_recommendation.csv')
+    model = CropRecommendation(os.path.join(os.getcwd(), "data/Crop_recommendation.csv"))
     model.data_preprocessing()
     model.Test_trsin_split()
     model.train()

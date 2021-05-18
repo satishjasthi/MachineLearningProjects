@@ -5,7 +5,7 @@ from numpy import percentile
 from fbprophet import Prophet
 from matplotlib import pyplot as plt
 from sklearn.metrics import mean_absolute_error
-
+import os
 
 class Rice_forcasting:
 
@@ -183,7 +183,7 @@ class Rice_forcasting:
         plt.show()
 
 if __name__ == "__main__":
-    model = Rice_forcasting(r'C:\Users\mohan\Documents\Datascience Projects\Machine learning projects\Agriculture project\Agriculture Project\Crop_Price_forcasting\Banglore_rice.csv')
+    model = Rice_forcasting(os.path.join(os.getcwd(), "data/Rice.csv"))
     model.data_preprocessing()
     model.Train()
     model.Evaluate()
