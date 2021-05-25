@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "*"
+pandas = "*"
+sklearn = "*"
+pystan = "==2.19.1.1"
+fbprophet = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
